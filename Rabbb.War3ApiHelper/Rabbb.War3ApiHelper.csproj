@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Authors>Rabbb</Authors>
+    <Company>Rabbb</Company>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Rabbb/War3Api</RepositoryUrl>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <Version>1.32.9.1</Version>
+    <FileVersion>1.32.9.1</FileVersion>
+    <AssemblyVersion>1.32</AssemblyVersion>
+    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <Configurations>Debug;Release</Configurations>
+    <IsPublishable>False</IsPublishable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/Rabbb/War3Api/tree/zh_cn/Rabbb.War3ApiHelper</PackageProjectUrl>
+    <Description>Warcraft III's standard library API  Helper made available in C#.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net5.0|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="War3Api.Blizzard" Version="1.32.9" />
+    <PackageReference Include="War3Api.Common" Version="1.32.9" />
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
